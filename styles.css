@@ -142,7 +142,8 @@ margin-bottom: 1em;
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media (max-width:375px){
-
+.container{
+	padding:0;
 	.grid-component{
 		grid-template-areas:
   "main main"
