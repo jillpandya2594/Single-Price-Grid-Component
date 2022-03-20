@@ -1,0 +1,155 @@
+**,*::before,*::after{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+body{
+	font-size:16px;
+	font-family: 'Karla',sans-serif;
+	background-color: hsl(204, 43%, 93%);
+    
+   
+}
+.container{
+	margin:auto;
+	max-width:42rem;
+	
+
+	
+}
+.grid-component{
+	
+	display: grid;
+  grid-template-areas:
+  "main main"
+  "section aside"
+  ;	
+  grid-template-columns: 50% 50%;
+  grid-template-rows:1fr 1fr;	
+
+}
+
+
+main{
+    padding: 2em;
+    background-color: #fff;
+	grid-area:main;
+	display: flex;
+	flex-direction: column;
+    	
+}
+.hero{
+	color: hsl(179, 62%, 43%);
+	
+	font-size:16px;
+	font-weight: 700;
+}
+.hero-text{
+color: hsl(71, 73%, 54%);
+margin-top: 1em;
+}
+main>p{
+	color: hsl(218, 22%, 67%);
+	
+	line-height: 1.6;
+	font-size:16px;
+    
+  
+
+}
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    
+	padding: 2em;
+	background-color: hsl(179, 62%, 43%);
+	grid-area:section;
+	/*justify-content: space-between;*/
+
+
+}
+section>div:nth-of-type(1){
+	color:#fff;
+	font-weight: 700;
+margin-bottom: auto;
+
+}
+section>div:nth-of-type(2){
+	color:hsl(218, 22%, 93%);
+
+	margin-bottom: .5em;
+   
+}
+
+section>div:nth-of-type(3){
+	color:hsl(218, 22%, 93%);
+margin-bottom: auto;
+    
+	
+}
+section>a:nth-of-type(1){
+	color:#fff;
+	background-color:hsl(71, 73%, 54%);
+	text-align: center;
+	padding: .6em;
+	/*width:82%;*/
+	text-decoration: none;
+	border-radius: 4px; 
+	cursor: pointer;
+
+}
+.dollar{
+	color:#fff;
+	font-size:25px;
+
+	font-weight: 700;
+}
+aside{
+	grid-area:aside;
+	padding: 2em;
+	display:flex;
+	flex-direction: column;
+	background-color:hsl(180, 62%, 47%);
+	line-height: 1.6;
+
+
+}
+
+
+aside>div{
+	color:hsl(218, 22%, 93%);/*Grayish blue:hsl(218, 22%, 67%);light of this shade*/
+	font-weight:400;
+
+
+	 
+}
+aside>div:nth-of-type(1){
+font-weight: 700;
+color:#fff;
+margin-bottom: 1em;
+
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 4em;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:375px){
+
+	.grid-component{
+		grid-template-areas:
+  "main main"
+  "section section"
+  "aside aside"
+  ;	
+  grid-template-columns: 1fr;
+
+		
+  
+  
+	}
+
+	
+}
