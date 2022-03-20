@@ -72,8 +72,9 @@ section{
 
 
 }
-h4{ color:#fff;
+section>h1{ color:#fff;
  font-weight: 700;
+	font-size:16px;
   margin-top:0;
 
 
