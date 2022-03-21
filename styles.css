@@ -131,7 +131,7 @@ aside>div{
 
 	 
 }
-aside>div:nth-of-type(1){
+aside>h3:nth-of-type(1){
 font-weight: 700;
 color:#fff;
 margin-bottom: 1em;
