@@ -4,7 +4,7 @@
 	margin:0;
 }
 body{
-	font-size:16px;
+	font-size:1rem;
 	font-family: 'Karla',sans-serif;
 	background-color: hsl(204, 43%, 93%);
     
@@ -53,7 +53,7 @@ main>p{
 	color: hsl(218, 22%, 67%);
 	
 	line-height: 1.6;
-	font-size:16px;
+	font-size:1rem;
     
   
 
@@ -108,7 +108,7 @@ section>a:nth-of-type(1){
 }
 .dollar{
 	color:#fff;
-	font-size:25px;
+	font-size:35px;
 
 	font-weight: 700;
 }
@@ -145,17 +145,14 @@ margin-bottom: 1em;
 .container{
 	padding:0;
 	.grid-component{
-		grid-template-areas:
-  "main main"
-  "section section"
-  "aside aside"
-  ;	
-  grid-template-columns: repeat(minmax(auto,1fr));
-
+	display: flex;
+	flex-direction: column;
+ /* grid-template-columns: repeat(minmax(auto,1fr));*/
+	}
 		
   
   
-	}
+	
 
 	
 }
