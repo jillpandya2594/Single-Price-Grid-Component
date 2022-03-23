@@ -10,44 +10,51 @@ body{
     
    
 }
-.grid-component{
-	
+
+
+.container{
 	display: grid;
-  grid-template-areas:
+   max-width:40rem;
+   margin:auto;
+   padding:2em;
+  /*grid-template-areas:
   "main main"
   "section aside"
-  ;	
-  grid-template-columns: 50% 50%;
-  grid-template-rows:1fr;	
+  ;	*/
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:1fr 1fr;	
 
-}
-.container{
-	margin:auto;
-	max-width:40rem;
-	padding:2em;
 	
+
 
 	
 }
+
+	
+	
+
+	
+	
 
 
 main{
-    padding: 2em;
+   
     background-color: #fff;
-	grid-area:main;
-	display: flex;
-	flex-direction: column;
-    	
+	padding:2em;
+display:flex;
+flex-direction: column;
+grid-column:span 2;
+align-self:flex-end;    	
 }
 .hero{
 	color: hsl(179, 62%, 43%);
 	
-	
+		
 	font-weight: 700;
 }
 .hero-text{
 color: hsl(71, 73%, 54%);
-margin-top: 1em;
+
 }
 main>p{
 	color: hsl(218, 22%, 67%);
@@ -67,31 +74,34 @@ section{
     
 	padding: 2em;
 	background-color: hsl(179, 62%, 43%);
-	grid-area:section;
+	
 	/*justify-content: space-between;*/
 
 
-}
-h3{ color:#fff;
+} 
+h3{ 
+	color:#fff;
  font-weight: 700;
-	font-size:1.25rem;
   margin-top:0;
-	margin-bottom:1em;
-	align-self:flex-start;
+  margin-bottom: 1em;
+  font-size:1.25rem;/*20px;*/
+  align-self:flex-start;
 
 
 }
-
-section>div:nth-of-type(1){
+/*section>h4:nth-of-type(1){
+	
+}*/
+section>p:nth-of-type(1){
 	color:hsl(218, 22%, 93%);
    
 	margin-bottom: .5em;
     
 }
 
-section>div:nth-of-type(2){
+section>p:nth-of-type(2){
 	color:hsl(218, 22%, 93%);
-margin-bottom: auto;
+
     
 	
 }
@@ -100,23 +110,25 @@ section>a:nth-of-type(1){
 	background-color:hsl(71, 73%, 54%);
 	text-align: center;
 	padding: .6em;
-	/*width:82%;*/
+	width:82%;
+
 	text-decoration: none;
 	border-radius: 4px; 
 	cursor: pointer;
+	margin-top: 6em;
 
 }
 .dollar{
 	color:#fff;
-	font-size:2.1875rem;/*35px*/
+	font-size:2.1875rem;/*35px;*/
 
 	font-weight: 700;
 }
 aside{
-	grid-area:aside;
-	padding: 2em;
-	display:flex;
-	flex-direction: column;
+	/*grid-area:aside;*/
+	padding:2em;
+	/*display:flex;
+	flex-direction: column;*/
 	background-color:hsl(180, 62%, 47%);
 	line-height: 1.6;
 
@@ -124,7 +136,7 @@ aside{
 }
 
 
-aside>div{
+aside>p{
 	color:hsl(218, 22%, 93%);/*Grayish blue:hsl(218, 22%, 67%);light of this shade*/
 	font-weight:400;
 
@@ -142,16 +154,22 @@ margin-bottom: 1em;
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media (max-width:375px){
+	
+	
+  
 .container{
-	padding:.5em;
-	}
-	.grid-component{
-  grid-template-columns: repeat(auto-fit,25rem);
-	}
+ 
+ grid-template-columns: repeat(auto-fill,1fr);
+}
+
+
+
+}
+
+  
 		
   
   
 	
 
 	
-}
